@@ -1,34 +1,32 @@
-// constructor function (class in other languages)
-// a form for creating multiple objects1
-// a form is used to collect many objects into one class
-// can create many objects that have the same properties and methods.
+// how to add properties outside of constructor functions.
+// prototype -- prelimanary model
 
-
-
-function person(name, lastName, age)
+function person(firstName, lastName, age)
 {
-  this.name = name;
-  this.lastName = lastName;
-  this.age = age;
-  this.toString = function()
+  this.firstName = firstName;
+  this.lastName  = lastName;
+  this.age       = age;
+  this.toString  = function()
   {
-    return this.name + " , " + this.age
+    return this.firstName + " " + this.lastName + " is " + this.age + " years old."
   };
-  this.isAdult = function()
+  this.isAdult   = function()
   {
     if (this.age <= 18)
-      return this.name + " " + "is not an adult."
+      return this.firstName + " is not an adult."
     else
-      return this.name + " " + "is an adult."
+      return this.firstName + " is an adult for sure."
   };
-};
-
-var x = new person("Garrett", "Ross", "32");
-var y = new person("Sarah", "Ross", "28");
-var a = new person("Jake", "Ross", "45");
-var b = new person("Donna", "Ross", "56");
-var c = new person("John", "Ross", "14");
+}
 
 
-var div = document.getElementById('test');
-div.innerHTML = x + "<br>" + y + "<br>" + a + "<br>" + b;
+var x = new person("Garrett", "Ross", 32);
+var y = new person("Jacob", "Ross", 35);
+var z = new person("John", "Ross", 63);
+
+person.prototype.newProp = 5;
+
+
+
+var div = document.getElementById("test");
+div.innerHTML = x.newProp + "<br>" + y.newProp + "<br>" + z.newProp;
