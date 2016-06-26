@@ -9,27 +9,74 @@ var arr = [
   " new last thing "
 ];
 //
-// var x = document.getElementById('test');
+var x = document.getElementById('test');
+
+
+
+i = 0;
+while(i < arr.length)
+{ if (arr[i] === " ruby ")
+    x.innerHTML += " I tell ya what, I love this ruby." + "<br>";
+  else if (arr[i] === " js ")
+    x.innerHTML += " I fucking hate Javascript." + '<br>';
+  else
+  x.innerHTML += arr[i] + "<br>"
+
+  i++;
+};
+
+// function getTeams(idOfList) {
+//
+//   var teams = document.getElementById(idOfList).getElementsByTagName("li");
 //
 //
+//   var i = 0;
 //
-// i = 0;
-// while(i < arr.length)
-// { if (arr[i] === " ruby ")
-//     x.innerHTML += " I tell ya what, I love this language. == ";
-//   x.innerHTML += arr[i] + "<br>"
+//     while(i < teams.length)
+//       {
+//         test.innerHTML += teams[i].innerHTML + '<br>';
+//         i++;
+//       };
 //
-//   i++;
 // };
+//
+// getTeams('football');
 
-var test = document.getElementById('test');
-var a = document.getElementById('basketball').getElementsByTagName("li");
-var b = document.getElementById('football').getElementsByTagName("li");
+// function getTeams(listOfTeams)
+// {
+//   var teams = document.getElementById(listOfTeams).getElementsByTagName("li");
+//   var i = 0;
+//
+//   while(i < teams.length)
+//   {
+//     test.innerHTML += teams[i].innerHTML + "<br>";
+//     i++;
+//   }
+// };
+//
+// getTeams('football');
 
-var i = 0;
+// function getTeams(idOfTeams) {
+//   var teams = document.getElementById(idOfTeams).getElementsByTagName('li');
+//   var i = 0;
+//
+//   while(i < teams.length)
+//   {
+//     test.innerHTML += teams[i].innerHTML + "<br>";
+//     i++;
+//   }
+// };
+//
+// getTeams('basketball');
 
-  while(i < list.length)
-    {
-      test.innerHTML += list[i].innerHTML + "<br>";
-      i++;
-    };
+function getTeams(idOfTeams) {
+  var teams = document.getElementById(idOfTeams).getElementsByTagName('li');
+  var i = 0;
+
+  while(i < teams.length) {
+    test.innerHTML += teams[i].innerHTML + "<br>";
+    i++;
+  }
+};
+
+getTeams('football');
