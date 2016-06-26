@@ -30,6 +30,8 @@ for (var i = 0; i < 5; i++)
 }
 
 
+// continue
+
 function getTeams(nameOflist) {
 var teams = document.getElementById(nameOflist).getElementsByTagName('li');
   for (var i = 0; i < teams.length; i++)
@@ -42,14 +44,16 @@ var teams = document.getElementById(nameOflist).getElementsByTagName('li');
 
 getTeams('basketball');
 
-function getTeams(nameOflist) {
-var teams = document.getElementById(nameOflist).getElementsByTagName('li');
-  for (var i = 0; i < teams.length; i++)
-  {
-    if (teams[i].innerHTML === 'suns')
-      break;
-    test.innerHTML += teams[i].innerHTML + "<br>"
-  }
-};
+// break
 
-getTeams('basketball');
+// function getTeams(nameOflist) {
+// var teams = document.getElementById(nameOflist).getElementsByTagName('li');
+//   for (var i = 0; i < teams.length; i++)
+//   {
+//     if (teams[i].innerHTML === 'suns')
+//       break;
+//     test.innerHTML += teams[i].innerHTML + "<br>"
+//   }
+// };
+//
+// getTeams('basketball');
