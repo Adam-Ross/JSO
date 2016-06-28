@@ -12,37 +12,37 @@
 
 // Break
 
-for (var i = 0; i < 5; i++)
-{
-  if (i === 2)
-    break; // ==> is going to break out of the loop.
-  alert(i);
-}
-
-
-//  Continue
-
-for (var i = 0; i < 5; i++)
-{
-  if (i === 2)
-    continue; // ==> is going to skip over two and continue the loop.
-  alert(i);
-}
-
-
-// continue
-
-function getTeams(nameOflist) {
-var teams = document.getElementById(nameOflist).getElementsByTagName('li');
-  for (var i = 0; i < teams.length; i++)
-  {
-    if (teams[i].innerHTML === 'suns')
-      continue;
-    test.innerHTML += teams[i].innerHTML + "<br>"
-  }
-};
-
-getTeams('basketball');
+// for (var i = 0; i < 5; i++)
+// {
+//   if (i === 2)
+//     break; // ==> is going to break out of the loop.
+//   alert(i);
+// }
+//
+//
+// //  Continue
+//
+// for (var i = 0; i < 5; i++)
+// {
+//   if (i === 2)
+//     continue; // ==> is going to skip over two and continue the loop.
+//   alert(i);
+// }
+//
+//
+// // continue
+//
+// function getTeams(nameOflist) {
+// var teams = document.getElementById(nameOflist).getElementsByTagName('li');
+//   for (var i = 0; i < teams.length; i++)
+//   {
+//     if (teams[i].innerHTML === 'suns')
+//       continue;
+//     test.innerHTML += teams[i].innerHTML + "<br>"
+//   }
+// };
+//
+// getTeams('basketball');
 
 // break
 
@@ -57,3 +57,15 @@ getTeams('basketball');
 // };
 //
 // getTeams('basketball');
+
+
+function getTeams(idOflist)
+{
+  var teams = document.getElementById(idOflist).getElementsByTagName('li');
+    for(var i = 0; i < teams.length; i++)
+      {
+        test.innerHTML += teams[i].innerHTML + "<br>"
+      }
+};
+
+getTeams("basketball");
