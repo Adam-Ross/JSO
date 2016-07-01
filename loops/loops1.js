@@ -1,82 +1,35 @@
-// loops can execute a block of code as many times as yo want.
+// loops can execute a block of code as many times as you want.
 
-var arr = [
-  "the first thing",
-  "php ",
-  " ruby ",
-  " js ",
-  " something ",
-  " new last thing "
-];
-//
-var x = document.getElementById('test');
+arr = [
+  "Saints",
+  "Mavericks",
+  "Cowboys",
+  "Longhorns",
+  "Heat"
+]
 
+// var teams = document.getElementById('test');
 
 
-i = 0;
-while(i < arr.length)
-{ if (arr[i] === " ruby ")
-    x.innerHTML += " I tell ya what, I love this ruby." + "<br>";
-  else if (arr[i] === " js ")
-    x.innerHTML += " I fucking hate Javascript." + '<br>';
-  else
-  x.innerHTML += arr[i] + "<br>"
-
-  i++;
-};
-
-// function getTeams(idOfList) {
-//
-//   var teams = document.getElementById(idOfList).getElementsByTagName("li");
-//
-//
-//   var i = 0;
-//
-//     while(i < teams.length)
-//       {
-//         test.innerHTML += teams[i].innerHTML + '<br>';
-//         i++;
-//       };
-//
+// the WHILE loop
+// var i = 0;
+// while(i < arr.length){
+//   teams.innerHTML += arr[i] + '<br>';
+//   i++;
 // };
-//
-// getTeams('football');
 
-// function getTeams(listOfTeams)
-// {
-//   var teams = document.getElementById(listOfTeams).getElementsByTagName("li");
-//   var i = 0;
-//
-//   while(i < teams.length)
-//   {
-//     test.innerHTML += teams[i].innerHTML + "<br>";
-//     i++;
-//   }
-// };
-//
-// getTeams('football');
 
-// function getTeams(idOfTeams) {
-//   var teams = document.getElementById(idOfTeams).getElementsByTagName('li');
-//   var i = 0;
-//
-//   while(i < teams.length)
-//   {
-//     test.innerHTML += teams[i].innerHTML + "<br>";
-//     i++;
-//   }
-// };
-//
-// getTeams('basketball');
 
-function getTeams(idOfTeams) {
-  var teams = document.getElementById(idOfTeams).getElementsByTagName('li');
+
+function printTeams(nameOfId) {
+  var teams = document.getElementById(nameOfId).getElementsByTagName('li');
   var i = 0;
-
-  while(i < teams.length) {
-    test.innerHTML += teams[i].innerHTML + "<br>";
-    i++;
+    while(i < teams.length){
+      if (teams[i].innerHTML === 'chiefs')
+        test.innerHTML += "This team is the worst: The "
+      test.innerHTML += teams[i].innerHTML + "<br>";
+      i++;
   }
 };
 
-getTeams('football');
+printTeams('football');
